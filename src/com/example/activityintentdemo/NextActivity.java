@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NextActivity extends Activity{
 	private Button button;
 	private TextView textView;
 	private EditText editText;
 	Intent intent=new Intent();
+	private View view;
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class NextActivity extends Activity{
     }
 
 	private void setListener() {
+		
 		button.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -41,6 +44,13 @@ public class NextActivity extends Activity{
 				finish();
 			}
 		});
+		view.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Toast.makeText(NextActivity.this, "dsd", Toast.LENGTH_LONG).show();;
+			}
+		});
 		
 	}
 
@@ -48,6 +58,7 @@ public class NextActivity extends Activity{
 		button=(Button)findViewById(R.id.button1);
 		textView=(TextView)findViewById(R.id.textView);
 		editText=(EditText)findViewById(R.id.editText);
+		view=findViewById(R.id.relative);
 		
 	}
 }

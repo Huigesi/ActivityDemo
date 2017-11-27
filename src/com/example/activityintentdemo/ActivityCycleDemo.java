@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class ActivityCycleDemo extends Activity{
-	
-	//打电话会切断虚拟机和adt之间的联系
+public class ActivityCycleDemo extends Activity {
+
+	// 打电话会切断虚拟机和adt之间的联系
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -48,6 +48,5 @@ public class ActivityCycleDemo extends Activity{
 		super.onStop();
 		Log.i("activity", "onStop");
 	}
-	
 
 }
